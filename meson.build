@@ -21,7 +21,7 @@ deps = [
     dependency('libdrm', version: '>=2.4.60').partial_dependency(compile_args: true),
     dependency('threads'),
 ]
-libva_deps = dependency('libva', version: '>= 1.8.0').partial_dependency(compile_args: true)
+libva_deps = dependency('libva', version: '>= 1.7.0').partial_dependency(compile_args: true)
 deps += [libva_deps]
 
 gst_codecs_deps = dependency('gstreamer-codecparsers-1.0', required: false)
