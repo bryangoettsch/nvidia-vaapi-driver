@@ -85,8 +85,8 @@ const NVFormatInfo formatsInfo[] =
     [NV_FORMAT_NONE] = {0},
     [NV_FORMAT_NV12] = {1, 2, DRM_FORMAT_NV12,     false, false, {{1, DRM_FORMAT_R8,       {0,0}}, {2, DRM_FORMAT_RG88,   {1,1}}},                            {VA_FOURCC_NV12, VA_LSB_FIRST,   12, 0,0,0,0,0}},
     [NV_FORMAT_P010] = {2, 2, DRM_FORMAT_P010,     true,  false, {{1, DRM_FORMAT_R16,      {0,0}}, {2, DRM_FORMAT_RG1616, {1,1}}},                            {VA_FOURCC_P010, VA_LSB_FIRST,   24, 0,0,0,0,0}},
-    [NV_FORMAT_P012] = {2, 2, DRM_FORMAT_P012,     true,  false, {{1, DRM_FORMAT_R16,      {0,0}}, {2, DRM_FORMAT_RG1616, {1,1}}},                            {VA_FOURCC_P012, VA_LSB_FIRST,   24, 0,0,0,0,0}},
-    [NV_FORMAT_P016] = {2, 2, DRM_FORMAT_P016,     true,  false, {{1, DRM_FORMAT_R16,      {0,0}}, {2, DRM_FORMAT_RG1616, {1,1}}},                            {VA_FOURCC_P016, VA_LSB_FIRST,   24, 0,0,0,0,0}},
+//    [NV_FORMAT_P012] = {2, 2, DRM_FORMAT_P012,     true,  false, {{1, DRM_FORMAT_R16,      {0,0}}, {2, DRM_FORMAT_RG1616, {1,1}}},                            {VA_FOURCC_P012, VA_LSB_FIRST,   24, 0,0,0,0,0}},
+//    [NV_FORMAT_P016] = {2, 2, DRM_FORMAT_P016,     true,  false, {{1, DRM_FORMAT_R16,      {0,0}}, {2, DRM_FORMAT_RG1616, {1,1}}},                            {VA_FOURCC_P016, VA_LSB_FIRST,   24, 0,0,0,0,0}},
     [NV_FORMAT_444P] = {1, 3, DRM_FORMAT_YUV444,   false, true,  {{1, DRM_FORMAT_R8,       {0,0}}, {1, DRM_FORMAT_R8,     {0,0}}, {1, DRM_FORMAT_R8, {0,0}}}, {VA_FOURCC_444P, VA_LSB_FIRST,   24, 0,0,0,0,0}},
 #if VA_CHECK_VERSION(1, 20, 0)
     [NV_FORMAT_Q416] = {2, 3, DRM_FORMAT_INVALID,  true,  true,  {{1, DRM_FORMAT_R16,      {0,0}}, {1, DRM_FORMAT_R16,    {0,0}}, {1, DRM_FORMAT_R16,{0,0}}}, {VA_FOURCC_Q416, VA_LSB_FIRST,   48, 0,0,0,0,0}},
@@ -1897,16 +1897,16 @@ static VAStatus nvQuerySurfaceAttributes(
                 attrib_list[attrib_idx].value.type = VAGenericValueTypeInteger;
                 attrib_list[attrib_idx].value.value.i = VA_FOURCC_P010;
                 attrib_idx += 1;
-                attrib_list[attrib_idx].type = VASurfaceAttribPixelFormat;
-                attrib_list[attrib_idx].flags = 0;
-                attrib_list[attrib_idx].value.type = VAGenericValueTypeInteger;
-                attrib_list[attrib_idx].value.value.i = VA_FOURCC_P012;
-                attrib_idx += 1;
-                attrib_list[attrib_idx].type = VASurfaceAttribPixelFormat;
-                attrib_list[attrib_idx].flags = 0;
-                attrib_list[attrib_idx].value.type = VAGenericValueTypeInteger;
-                attrib_list[attrib_idx].value.value.i = VA_FOURCC_P016;
-                attrib_idx += 1;
+//                attrib_list[attrib_idx].type = VASurfaceAttribPixelFormat;
+//                attrib_list[attrib_idx].flags = 0;
+//                attrib_list[attrib_idx].value.type = VAGenericValueTypeInteger;
+//                attrib_list[attrib_idx].value.value.i = VA_FOURCC_P012;
+//                attrib_idx += 1;
+//                attrib_list[attrib_idx].type = VASurfaceAttribPixelFormat;
+//                attrib_list[attrib_idx].flags = 0;
+//                attrib_list[attrib_idx].value.type = VAGenericValueTypeInteger;
+//                attrib_list[attrib_idx].value.value.i = VA_FOURCC_P016;
+//                attrib_idx += 1;
             }
         }
     }
